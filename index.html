@@ -3,91 +3,261 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DON CEZAR PRODUCTION | About</title>
+  <title>DON CEZAR PRODUCTION</title>
+  <meta name="description" content="Advertising | Logo Design | Video Editing" />
   <style>
     :root{--bg:#0b1220;--card:#101a30;--txt:#eaf0ff;--mut:#a9b6d6;--acc:#d8b15a;--acc2:#6aa6ff}
     *{box-sizing:border-box}
     body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:radial-gradient(1200px 700px at 20% 10%, #162449, #070b14);color:var(--txt)}
     a{color:inherit;text-decoration:none}
-    .wrap{max-width:980px;margin:auto;padding:22px}
+    .wrap{max-width:1120px;margin:auto;padding:22px}
     .nav{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-    .brand{font-weight:800;letter-spacing:.6px}
+    .brand{display:flex;align-items:center;gap:10px}
+    .logoDot{width:12px;height:12px;border-radius:50%;background:linear-gradient(135deg,var(--acc),#fff2c2);box-shadow:0 0 20px rgba(216,177,90,.35)}
+    .brand h1{margin:0;font-size:18px;letter-spacing:.6px}
+    .badge{color:var(--mut);font-size:13px}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
+    .btn{display:inline-block;padding:12px 16px;border-radius:14px;background:linear-gradient(135deg,var(--acc),#f0d38a);color:#1a1406;font-weight:800}
     .btn2{display:inline-block;padding:12px 16px;border-radius:14px;border:1px solid rgba(106,166,255,.35);background:rgba(106,166,255,.08)}
-    .card{margin-top:14px;background:rgba(16,26,48,.78);border:1px solid rgba(216,177,90,.18);border-radius:18px;padding:16px;backdrop-filter:blur(8px)}
-    h1{margin:0 0 8px;font-size:30px}
-    p{margin:0 0 10px;color:var(--mut);line-height:1.9}
-    ul{margin:0;padding:0 18px;color:var(--mut);line-height:1.9}
+    .hero{display:grid;grid-template-columns:1.25fr .75fr;gap:14px;margin-top:14px}
+    .card{background:rgba(16,26,48,.78);border:1px solid rgba(216,177,90,.18);border-radius:18px;padding:16px;backdrop-filter:blur(8px)}
+    .hero h2{margin:0 0 8px;font-size:34px;line-height:1.2}
+    .hero p{margin:0 0 10px;color:var(--mut);line-height:1.9}
+    .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+    .kpi{padding:12px;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)}
+    .kpi b{display:block;font-size:16px}
+    .kpi span{color:var(--mut);font-size:12px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+    .item h3{margin:0 0 8px;font-size:18px}
+    .item ul{margin:0;padding:0 18px;color:var(--mut);line-height:1.9}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+    .gallery img{width:100%;height:220px;object-fit:cover;border-radius:14px;border:1px solid rgba(255,255,255,.10);cursor:pointer}
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+    .field{padding:12px;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);color:var(--mut)}
+    .foot{margin:16px 0 6px;color:var(--mut);font-size:13px;text-align:center}
+    .lang{display:flex;gap:8px;flex-wrap:wrap}
     select{background:rgba(255,255,255,.06);color:var(--txt);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:10px 12px}
     option{color:#0b1220}
+    /* lightbox */
+    .lb{position:fixed;inset:0;background:rgba(0,0,0,.8);display:none;align-items:center;justify-content:center;padding:18px}
+    .lb img{max-width:min(1100px,96vw);max-height:86vh;border-radius:14px}
+    .lb .close{position:absolute;top:16px;inset-inline-end:16px;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);cursor:pointer}
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .gallery{grid-template-columns:1fr 1fr}
+      .contact{grid-template-columns:1fr}
+      .hero h2{font-size:28px}
+    }
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <div class="nav">
-      <div class="brand">DON CEZAR PRODUCTION</div>
-      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+      <div class="brand">
+        <div class="logoDot"></div>
+        <div>
+          <h1>DON CEZAR PRODUCTION</h1>
+          <div class="badge" data-i18n="tagline">إشهار • تصميم شعارات • مونتاج فيديو</div>
+        </div>
+      </div>
+
+      <div class="pill">
         <span style="color:var(--mut)" data-i18n="language">اللغة</span>
-        <select id="lang">
-          <option value="ar">العربية</option>
-          <option value="fr">Français</option>
-          <option value="en">English</option>
-        </select>
-        <a class="btn2" href="index.html" data-i18n="back">الرجوع للرئيسية</a>
+        <div class="lang">
+          <select id="lang">
+            <option value="ar">العربية</option>
+            <option value="fr">Français</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn2" href="#services" data-i18n="nav_services">الخدمات</a>
+        <a class="btn2" href="#gallery" data-i18n="nav_gallery">المعرض</a>
+        <a class="btn" href="#contact" data-i18n="nav_contact">تواصل الآن</a>
       </div>
     </div>
 
-    <div class="card">
-      <h1 data-i18n="title">من نحن</h1>
-      <p data-i18n="p1">
-        DON CEZAR PRODUCTION مشروع إشهاري متخصص في التصميم والمونتاج، نساعدك على تقديم علامتك بشكل احترافي وجذاب.
-      </p>
-      <p data-i18n="p2">
-        نقدم خدمات صناعة الشعارات التجارية، اللوحات الإعلانية، تصميم الإشهارات، ودمج/تحرير الصور والفيديوهات حسب متطلباتك.
-      </p>
+    <div class="hero">
+      <div class="card">
+        <h2 data-i18n="hero_title">خدمات إشهارية باحتراف</h2>
+        <p data-i18n="hero_desc">
+          نصنع الشعارات التجارية، اللوحات الإعلانية، الإشهارات، ودمج الصور والفيديوهات بجودة عالية.
+        </p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
+          <a class="btn" id="waBtn" href="https://wa.me/212668919744" target="_blank" rel="noopener" data-i18n="cta_whatsapp">مراسلة واتساب</a>
+          <a class="btn2" href="#gallery" data-i18n="cta_gallery">مشاهدة الأعمال</a>
+        </div>
 
-      <h3 style="margin:14px 0 8px" data-i18n="why">مبادئنا</h3>
-      <ul>
-        <li data-i18n="b1">الوضوح والبساطة في التصميم.</li>
-        <li data-i18n="b2">جودة مناسبة للطباعة والمنصات الرقمية.</li>
-        <li data-i18n="b3">تواصل سريع وتسليم في الوقت.</li>
-      </ul>
+        <div class="kpis">
+          <div class="kpi"><b data-i18n="k1_t">شعارات</b><span data-i18n="k1_d">هويات بصرية قوية</span></div>
+          <div class="kpi"><b data-i18n="k2_t">لوحات</b><span data-i18n="k2_d">تصاميم للطباعة</span></div>
+          <div class="kpi"><b data-i18n="k3_t">فيديو</b><span data-i18n="k3_d">إشهارات ومونتاج</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 style="margin:0 0 8px" data-i18n="why_title">ماذا ستحصل؟</h3>
+        <div class="field" data-i18n="why_1">✔ جودة مناسبة للطباعة والسوشيال ميديا</div>
+        <div class="field" style="margin-top:10px" data-i18n="why_2">✔ تسليم سريع حسب نوع المشروع</div>
+        <div class="field" style="margin-top:10px" data-i18n="why_3">✔ تواصل مباشر عبر واتساب</div>
+      </div>
     </div>
+
+    <div id="services" class="grid">
+      <div class="card item">
+        <h3 data-i18n="s1_t">تصميم الشعارات</h3>
+        <ul>
+          <li data-i18n="s1_1">Logo احترافي ومتوازن</li>
+          <li data-i18n="s1_2">ألوان وخطوط وهوية</li>
+          <li data-i18n="s1_3">ملفات جاهزة (PNG / PDF)</li>
+        </ul>
+      </div>
+      <div class="card item">
+        <h3 data-i18n="s2_t">لوحات وإشهارات</h3>
+        <ul>
+          <li data-i18n="s2_1">بنرات وبوسترات</li>
+          <li data-i18n="s2_2">واجهات ولافتات</li>
+          <li data-i18n="s2_3">تصاميم للطباعة</li>
+        </ul>
+      </div>
+      <div class="card item">
+        <h3 data-i18n="s3_t">دمج الصور والفيديو</h3>
+        <ul>
+          <li data-i18n="s3_1">مونتاج إشهاري</li>
+          <li data-i18n="s3_2">تحسين ألوان وصوت</li>
+          <li data-i18n="s3_3">مقاسات لجميع المنصات</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="gallery" class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px" data-i18n="g_title">المعرض</h3>
+      <p data-i18n="g_desc">بعض من الأعمال الخاصة بـ DON CEZAR PRODUCTION.</p>
+
+      <div class="gallery">
+        <img src="assets/work1.jpg" alt="Work 1" />
+        <img src="assets/card-doncezar.jpg" alt="Card" />
+        <img src="assets/work2.jpg" alt="Work 2" />
+        <img src="assets/work3.jpg" alt="Work 3" />
+        <img src="assets/work5.jpg" alt="Work 5" />
+        <img src="assets/work6.jpg" alt="Work 6" />
+      </div>
+    </div>
+
+    <div id="contact" class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px" data-i18n="c_title">التواصل</h3>
+      <p data-i18n="c_desc">اتصل الآن أو راسل عبر واتساب، وسيتم الرد في أقرب وقت.</p>
+
+      <div class="contact">
+        <div class="field">WhatsApp: 0668919744</div>
+        <div class="field" data-i18n="c_phone">الهاتف: 0668805634</div>
+        <div class="field">Facebook: DONCEZARProduction</div>
+        <div class="field">Morocco</div>
+      </div>
+
+      <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn" href="https://wa.me/212668919744" target="_blank" rel="noopener" data-i18n="cta_whatsapp2">مراسلة واتساب</a>
+        <a class="btn2" href="tel:+212668805634" data-i18n="cta_call">اتصال هاتفي</a>
+      </div>
+    </div>
+
+    <div class="foot">© <span id="y"></span> DON CEZAR PRODUCTION</div>
+  </div>
+
+  <div class="lb" id="lb">
+    <div class="close" id="lbClose" data-i18n="close">إغلاق</div>
+    <img id="lbImg" alt="preview" />
   </div>
 
   <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Lightbox gallery
+    const lb = document.getElementById('lb');
+    const lbImg = document.getElementById('lbImg');
+    document.querySelectorAll('.gallery img').forEach(img=>{
+      img.addEventListener('click', ()=>{
+        lbImg.src = img.src;
+        lb.style.display = 'flex';
+      });
+    });
+    document.getElementById('lbClose').onclick = ()=> lb.style.display = 'none';
+    lb.onclick = (e)=> { if(e.target === lb) lb.style.display = 'none'; };
+
+    // i18n
     const dict = {
-      ar:{
+      ar: {
+        tagline:"إشهار • تصميم شعارات • مونتاج فيديو",
         language:"اللغة",
-        back:"الرجوع للرئيسية",
-        title:"من نحن",
-        p1:"DON CEZAR PRODUCTION مشروع إشهاري متخصص في التصميم والمونتاج، نساعدك على تقديم علامتك بشكل احترافي وجذاب.",
-        p2:"نقدم خدمات صناعة الشعارات التجارية، اللوحات الإعلانية، تصميم الإشهارات، ودمج/تحرير الصور والفيديوهات حسب متطلباتك.",
-        why:"مبادئنا",
-        b1:"الوضوح والبساطة في التصميم.",
-        b2:"جودة مناسبة للطباعة والمنصات الرقمية.",
-        b3:"تواصل سريع وتسليم في الوقت."
+        nav_services:"الخدمات", nav_gallery:"المعرض", nav_contact:"تواصل الآن",
+        hero_title:"خدمات إشهارية باحتراف",
+        hero_desc:"نصنع الشعارات التجارية، اللوحات الإعلانية، الإشهارات، ودمج الصور والفيديوهات بجودة عالية.",
+        cta_whatsapp:"مراسلة واتساب", cta_gallery:"مشاهدة الأعمال",
+        k1_t:"شعارات", k1_d:"هويات بصرية قوية",
+        k2_t:"لوحات", k2_d:"تصاميم للطباعة",
+        k3_t:"فيديو", k3_d:"إشهارات ومونتاج",
+        why_title:"ماذا ستحصل؟",
+        why_1:"✔ جودة مناسبة للطباعة والسوشيال ميديا",
+        why_2:"✔ تسليم سريع حسب نوع المشروع",
+        why_3:"✔ تواصل مباشر عبر واتساب",
+        s1_t:"تصميم الشعارات", s1_1:"Logo احترافي ومتوازن", s1_2:"ألوان وخطوط وهوية", s1_3:"ملفات جاهزة (PNG / PDF)",
+        s2_t:"لوحات وإشهارات", s2_1:"بنرات وبوسترات", s2_2:"واجهات ولافتات", s2_3:"تصاميم للطباعة",
+        s3_t:"دمج الصور والفيديو", s3_1:"مونتاج إشهاري", s3_2:"تحسين ألوان وصوت", s3_3:"مقاسات لجميع المنصات",
+        g_title:"المعرض", g_desc:"بعض من الأعمال الخاصة بـ DON CEZAR PRODUCTION.",
+        c_title:"التواصل", c_desc:"اتصل الآن أو راسل عبر واتساب، وسيتم الرد في أقرب وقت.",
+        c_phone:"الهاتف: 0668805634",
+        cta_whatsapp2:"مراسلة واتساب", cta_call:"اتصال هاتفي",
+        close:"إغلاق"
       },
-      fr:{
+      fr: {
+        tagline:"Publicité • Design de logo • Montage vidéo",
         language:"Langue",
-        back:"Retour à l’accueil",
-        title:"À propos",
-        p1:"DON CEZAR PRODUCTION est un projet publicitaire spécialisé en design et montage, pour présenter votre marque de façon professionnelle et attractive.",
-        p2:"Nous proposons: création de logos, panneaux publicitaires, visuels publicitaires, et retouche/montage photo & vidéo selon votre besoin.",
-        why:"Nos principes",
-        b1:"Clarté et simplicité du design.",
-        b2:"Qualité adaptée à l’impression et au digital.",
-        b3:"Communication rapide et livraison à temps."
+        nav_services:"Services", nav_gallery:"Galerie", nav_contact:"Contact",
+        hero_title:"Services publicitaires professionnels",
+        hero_desc:"Création de logos, panneaux publicitaires, annonces, et montage/retouche photo & vidéo avec une qualité premium.",
+        cta_whatsapp:"WhatsApp", cta_gallery:"Voir le portfolio",
+        k1_t:"Logos", k1_d:"Identité visuelle",
+        k2_t:"Panneaux", k2_d:"Prêt pour impression",
+        k3_t:"Vidéo", k3_d:"Ads & montage",
+        why_title:"Pourquoi nous choisir ?",
+        why_1:"✔ Qualité pour impression et réseaux sociaux",
+        why_2:"✔ Livraison rapide selon le projet",
+        why_3:"✔ Contact direct via WhatsApp",
+        s1_t:"Design de logo", s1_1:"Logo professionnel", s1_2:"Couleurs & typographie", s1_3:"Fichiers (PNG / PDF)",
+        s2_t:"Panneaux & publicités", s2_1:"Bannières & posters", s2_2:"Façades & enseignes", s2_3:"Design prêt à imprimer",
+        s3_t:"Photo & vidéo", s3_1:"Montage publicitaire", s3_2:"Couleur & audio", s3_3:"Formats pour toutes plateformes",
+        g_title:"Galerie", g_desc:"Quelques réalisations de DON CEZAR PRODUCTION.",
+        c_title:"Contact", c_desc:"Appelez ou envoyez un message WhatsApp, réponse rapide.",
+        c_phone:"Téléphone : 0668805634",
+        cta_whatsapp2:"WhatsApp", cta_call:"Appeler",
+        close:"Fermer"
       },
-      en:{
+      en: {
+        tagline:"Advertising • Logo Design • Video Editing",
         language:"Language",
-        back:"Back to home",
-        title:"About",
-        p1:"DON CEZAR PRODUCTION is an advertising project specialized in design and editing, helping you present your brand in a professional and attractive way.",
-        p2:"Services include logo design, billboards, ad visuals, and photo/video compositing & editing tailored to your needs.",
-        why:"Our principles",
-        b1:"Clear and simple design.",
-        b2:"Quality for print and digital platforms.",
-        b3:"Fast communication and on-time delivery."
+        nav_services:"Services", nav_gallery:"Gallery", nav_contact:"Contact",
+        hero_title:"Professional advertising services",
+        hero_desc:"Logos, billboards, ads, and photo/video compositing & editing with a clean professional look.",
+        cta_whatsapp:"WhatsApp", cta_gallery:"View work",
+        k1_t:"Logos", k1_d:"Brand identity",
+        k2_t:"Billboards", k2_d:"Print-ready design",
+        k3_t:"Video", k3_d:"Ads & editing",
+        why_title:"What you get",
+        why_1:"✔ Quality for print & social media",
+        why_2:"✔ Fast delivery depending on the project",
+        why_3:"✔ Direct WhatsApp communication",
+        s1_t:"Logo design", s1_1:"Professional logo", s1_2:"Colors & typography", s1_3:"Files (PNG / PDF)",
+        s2_t:"Billboards & ads", s2_1:"Banners & posters", s2_2:"Front signs & boards", s2_3:"Print-ready layouts",
+        s3_t:"Photo & video", s3_1:"Commercial editing", s3_2:"Color & audio enhancement", s3_3:"All platform formats",
+        g_title:"Gallery", g_desc:"Selected works by DON CEZAR PRODUCTION.",
+        c_title:"Contact", c_desc:"Call or WhatsApp anytime—quick response.",
+        c_phone:"Phone: 0668805634",
+        cta_whatsapp2:"WhatsApp", cta_call:"Call",
+        close:"Close"
       }
     };
 
@@ -95,6 +265,7 @@
       const isAR = (l === 'ar');
       document.documentElement.lang = l;
       document.documentElement.dir = isAR ? 'rtl' : 'ltr';
+
       document.querySelectorAll('[data-i18n]').forEach(el=>{
         const key = el.getAttribute('data-i18n');
         if(dict[l] && dict[l][key]) el.textContent = dict[l][key];
