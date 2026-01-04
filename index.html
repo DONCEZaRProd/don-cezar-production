@@ -1,334 +1,138 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<title>DON CEZAR PRODUCTION | Advertising & Design</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<section>
-  <h2>Showreel</h2>
-  <video controls autoplay muted loop style="max-width:90%; border:2px solid #c9a24d; border-radius:10px;">
-    <source src="promo.mp4" type="video/mp4">
-    متصفحك لا يدعم تشغيل الفيديو
-  </video>
-</section>
-<style>
-body{
-  /* HERO VIDEO */
-.hero{
-position:relative;
-height:90vh;
-overflow:hidden;
-border-bottom:3px solid #c9a24d;
-}
-
-.hero-video{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-object-fit:cover;
-z-index:1;
-}
-
-.hero-overlay{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.6);
-z-index:2;
-}
-
-.hero-content{
-position:relative;
-z-index:3;
-height:100%;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-padding:20px;
-text-align:center;
-}
-
-.hero-content h1{
-color:#c9a24d;
-font-size:40px;
-margin-bottom:15px;
-}
-
-.hero-content p{
-color:#eee;
-max-width:750px;
-font-size:17px;
-margin-bottom:20px;
-}
-margin:0;
-font-family:Arial, sans-serif;
-background:#0b0b0b;
-color:#fff;
-line-height:1.6;
-text-align:center;
-}
-
-<header class="hero">
-
-  <video autoplay muted loop playsinline class="hero-video">
-    <source src="hero.mp4" type="video/mp4">
-  </video>
-
-  <div class="hero-overlay"></div>
-
-  <div class="hero-content">
-    <h1>DON CEZAR PRODUCTION</h1>
-    <p id="tagline">
-      Professional advertising & creative design that gives your brand real presence.
-    </p>
-
-    <div class="lang-buttons">
-      <button onclick="setLang('en')">EN</button>
-      <button onclick="setLang('fr')">FR</button>
-      <button onclick="setLang('ar')">AR</button>
-    </div>
-
-    <a class="cta" href="https://wa.me/212668919744">Contact via WhatsApp</a>
-  </div>
-
-</header>
-</section>
-.lang-buttons button{
-margin:6px;
-padding:8px 16px;
-border:none;
-cursor:pointer;
-background:#c9a24d;
-color:#000;
-font-weight:bold;
-}
-
-.cta{
-margin-top:20px;
-display:inline-block;
-padding:12px 22px;
-background:#c9a24d;
-color:#000;
-font-weight:bold;
-text-decoration:none;
-border-radius:6px;
-}
-
-section{
-padding:60px 20px;
-max-width:1100px;
-margin:auto;
-}
-
-h2{
-color:#c9a24d;
-margin-bottom:25px;
-}
-
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-}
-
-.card{
-background:#151515;
-padding:25px;
-border-radius:10px;
-border:1px solid #333;
-}
-
-.card h3{
-color:#c9a24d;
-margin-bottom:10px;
-}
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.gallery img{
-width:100%;
-border-radius:10px;
-border:2px solid #c9a24d;
-}
-
-.contact p{
-margin:8px 0;
-}
-
-footer{
-background:#000;
-padding:20px;
-border-top:2px solid #c9a24d;
-color:#aaa;
-font-size:14px;
-}
-
-/* WhatsApp Floating Button */
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25d366;
-color:#fff;
-width:60px;
-height:60px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:30px;
-text-decoration:none;
-z-index:1000;
-box-shadow:0 0 15px rgba(0,0,0,.6);
-}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DON CEZAR PRODUCTION | خدمات الإشهار والتصميم</title>
+  <meta name="description" content="صناعة الشعارات التجارية، اللوحات الإعلانية، الإشهارات، دمج الصور والفيديوهات." />
+  <style>
+    :root{--bg:#0b1220;--card:#121b2f;--txt:#eaf0ff;--mut:#a9b6d6;--acc:#6aa6ff}
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:linear-gradient(135deg,#070b14,#0b1220);color:var(--txt)}
+    a{color:inherit;text-decoration:none} .wrap{max-width:1100px;margin:auto;padding:24px}
+    .nav{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0}
+    .brand{font-weight:800;letter-spacing:.5px} .badge{color:var(--mut);font-size:14px}
+    .btn{display:inline-block;padding:12px 16px;border-radius:12px;background:var(--acc);color:#061028;font-weight:700}
+    .btn2{display:inline-block;padding:12px 16px;border-radius:12px;border:1px solid #2a3a63;color:var(--txt)}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:stretch;margin-top:18px}
+    .card{background:rgba(18,27,47,.8);border:1px solid rgba(106,166,255,.18);border-radius:18px;padding:18px}
+    h1{margin:0 0 10px;font-size:34px;line-height:1.2}
+    p{margin:0 0 10px;color:var(--mut);line-height:1.8}
+    .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+    .kpi{padding:12px;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)}
+    .kpi b{display:block;font-size:18px} .kpi span{color:var(--mut);font-size:13px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+    .item h3{margin:0 0 8px;font-size:18px}
+    .item ul{margin:0;padding:0 18px;color:var(--mut);line-height:1.9}
+    .portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+    .ph{aspect-ratio:16/10;border-radius:14px;background:linear-gradient(135deg,#1a2644,#0f1730);border:1px dashed rgba(106,166,255,.35);display:flex;align-items:center;justify-content:center;color:var(--mut);font-size:14px}
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+    .field{padding:12px;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);color:var(--mut)}
+    .foot{margin:18px 0 6px;color:var(--mut);font-size:13px;text-align:center}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.portfolio{grid-template-columns:1fr 1fr}.contact{grid-template-columns:1fr} h1{font-size:28px}}
+  </style>
 </head>
 
 <body>
+  <div class="wrap">
+    <div class="nav">
+      <div>
+        <div class="brand">DON CEZAR PRODUCTION</div>
+        <div class="badge">إشهار • تصميم • مونتاج</div>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn2" href="#services">الخدمات</a>
+        <a class="btn2" href="#portfolio">الأعمال</a>
+        <a class="btn" href="#contact">تواصل الآن</a>
+      </div>
+    </div>
 
-<header>
-<h1>DON CEZAR PRODUCTION</h1>
-<p id="tagline">
-Professional advertising & creative design that gives your brand real presence.
-</p>
+    <div class="hero">
+      <div class="card">
+        <h1>موقع إشهاري لخدمات التصميم والمونتاج</h1>
+        <p>
+          DON CEZAR PRODUCTION يقدم خدمات: صناعة الشعارات التجارية، اللوحات الإعلانية،
+          الإشهارات، ودمج الصور والفيديوهات بجودة احترافية.
+        </p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
+          <a class="btn" href="#contact">اطلب عرض سعر</a>
+          <a class="btn2" href="#portfolio">شاهد نماذج</a>
+        </div>
 
-<div class="lang-buttons">
-<button onclick="setLang('en')">EN</button>
-<button onclick="setLang('fr')">FR</button>
-<button onclick="setLang('ar')">AR</button>
-</div>
+        <div class="kpis">
+          <div class="kpi"><b>شعار</b><span>تصميم هويات بصرية</span></div>
+          <div class="kpi"><b>لوحات</b><span>بنرات ولافتات</span></div>
+          <div class="kpi"><b>فيديو</b><span>مونتاج وإشهارات</span></div>
+        </div>
+      </div>
 
-<a class="cta" href="https://wa.me/212668919744">Contact via WhatsApp</a>
-</header>
+      <div class="card">
+        <h2 style="margin:0 0 10px">لماذا تختارنا؟</h2>
+        <p>تصاميم واضحة، ألوان قوية، وتسليم سريع حسب نوع المشروع.</p>
+        <div class="field">✔ تعديلات حسب الاتفاق</div>
+        <div class="field" style="margin-top:10px">✔ ملفات جاهزة للطباعة والسوشيال</div>
+        <div class="field" style="margin-top:10px">✔ جودة مناسبة للإشهار</div>
+      </div>
+    </div>
 
-<section>
-<h2 id="about-title">Who We Are</h2>
-<p id="about-text">
-We are a creative production studio specialized in logo design, advertising visuals,
-branding and professional visual content for businesses and individuals.
-</p>
-</section>
+    <div id="services" class="grid">
+      <div class="card item">
+        <h3>صناعة الشعارات</h3>
+        <ul>
+          <li>Logo احترافي</li>
+          <li>ألوان وخطوط وهوية</li>
+          <li>نسخ متعددة (PNG / PDF)</li>
+        </ul>
+      </div>
+      <div class="card item">
+        <h3>اللوحات الإعلانية</h3>
+        <ul>
+          <li>بنرات وبوسترات</li>
+          <li>لوحات واجهات</li>
+          <li>تصاميم للطباعة</li>
+        </ul>
+      </div>
+      <div class="card item">
+        <h3>دمج الصور والفيديو</h3>
+        <ul>
+          <li>مونتاج إشهاري</li>
+          <li>تحسين ألوان وصوت</li>
+          <li>مقاسات سوشيال ميديا</li>
+        </ul>
+      </div>
+    </div>
 
-<section>
-<h2 id="services-title">Our Services</h2>
-<div class="services">
+    <div id="portfolio" class="card" style="margin-top:16px">
+      <h2 style="margin:0 0 8px">نماذج من الأعمال</h2>
+      <p>ضع صور/فيديوهات من أعمالك هنا (يمكن استبدال الخانات لاحقًا بصور حقيقية).</p>
+      <div class="portfolio">
+        <div class="ph">مكان صورة 1</div>
+        <div class="ph">مكان صورة 2</div>
+        <div class="ph">مكان صورة 3</div>
+        <div class="ph">مكان صورة 4</div>
+        <div class="ph">مكان صورة 5</div>
+        <div class="ph">مكان صورة 6</div>
+      </div>
+    </div>
 
-<div class="card">
-<h3 id="s1">Logo & Brand Identity</h3>
-<p id="s1t">
-Professional logos and brand identities designed to make your business stand out.
-</p>
-<a class="cta" href="https://wa.me/212668919744">Order Now</a>
-</div>
+    <div id="contact" class="card" style="margin-top:16px">
+      <h2 style="margin:0 0 8px">التواصل</h2>
+      <p>عدّل البيانات التالية بوضع رقمك/واتساب/إنستغرام/إيميل.</p>
 
-<div class="card">
-<h3 id="s2">Advertising Design</h3>
-<p id="s2t">
-Posters, banners, business cards, social media visuals and billboards.
-</p>
-<a class="cta" href="https://wa.me/212668919744">Get a Quote</a>
-</div>
+      <div class="contact">
+        <div class="field">واتساب: +212XXXXXXXXX</div>
+        <div class="field">إيميل: yourmail@example.com</div>
+        <div class="field">إنستغرام: @doncezar.production</div>
+        <div class="field">الموقع: Casablanca, Morocco</div>
+      </div>
 
-<div class="card">
-<h3 id="s3">Photo & Video Editing</h3>
-<p id="s3t">
-High-quality photo retouching and professional video editing.
-</p>
-<a class="cta" href="https://wa.me/212668919744">Contact Us</a>
-</div>
+      <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn" href="https://wa.me/212XXXXXXXXX" target="_blank" rel="noopener">مراسلة واتساب</a>
+        <a class="btn2" href="mailto:yourmail@example.com">إرسال بريد</a>
+      </div>
+    </div>
 
-</div>
-</section>
-
-<section>
-<h2 id="gallery-title">Our Work</h2>
-<div class="gallery">
-<img src="work1.jpg">
-<img src="work2.jpg">
-<img src="work3.jpg">
-</div>
-</section>
-
-<section>
-<h2>Business Card</h2>
-<img src="card-doncezar.jpg" style="max-width:420px;">
-</section>
-
-<section class="contact">
-<h2 id="contact-title">Contact</h2>
-<p>📞 Phone: 0668805634</p>
-<p>💬 WhatsApp: 0668919744</p>
-<p>📧 Email: zaidouarbia@me.com</p>
-<p>📘 Facebook: DON CEZAR Production</p>
-</section>
-
-<footer>
-© 2026 DON CEZAR PRODUCTION – All Rights Reserved
-</footer>
-
-<a class="whatsapp" href="https://wa.me/212668919744">✆</a>
-
-<script>
-function setLang(l){
-const t={
-en:{
-tag:"Professional advertising & creative design that gives your brand real presence.",
-aboutT:"Who We Are",
-about:"We are a creative production studio specialized in logo design, advertising visuals, branding and professional visual content.",
-serv:"Our Services",
-g:"Our Work",
-s1:"Logo & Brand Identity",s1t:"Professional logos and brand identities designed to make your business stand out.",
-s2:"Advertising Design",s2t:"Posters, banners, business cards, social media visuals and billboards.",
-s3:"Photo & Video Editing",s3t:"High-quality photo retouching and professional video editing.",
-c:"Contact"
-},
-fr:{
-tag:"Publicité et design créatif pour donner une vraie identité à votre marque.",
-aboutT:"À propos",
-about:"Studio créatif spécialisé en design graphique, identité visuelle et publicité.",
-serv:"Nos services",
-g:"Nos réalisations",
-s1:"Logo & identité visuelle",s1t:"Logos et identités professionnelles pour démarquer votre marque.",
-s2:"Design publicitaire",s2t:"Affiches, bannières, cartes, visuels réseaux sociaux.",
-s3:"Montage photo & vidéo",s3t:"Retouche photo et montage vidéo professionnel.",
-c:"Contact"
-},
-ar:{
-tag:"إشهار وتصميم إبداعي يمنح علامتك حضورًا قويًا.",
-aboutT:"من نحن",
-about:"استوديو إبداعي متخصص في تصميم الشعارات، الهوية البصرية والإشهار الاحترافي.",
-serv:"خدماتنا",
-g:"أعمالنا",
-s1:"الشعار والهوية البصرية",s1t:"تصميم احترافي يميز علامتك التجارية.",
-s2:"التصميم الإشهاري",s2t:"لوحات، ملصقات، بطاقات وأعمال رقمية.",
-s3:"تعديل الصور والفيديو",s3t:"مونتاج احترافي بجودة عالية.",
-c:"تواصل معنا"
-}
-};
-
-document.getElementById("tagline").innerText=t[l].tag;
-document.getElementById("about-title").innerText=t[l].aboutT;
-document.getElementById("about-text").innerText=t[l].about;
-document.getElementById("services-title").innerText=t[l].serv;
-document.getElementById("gallery-title").innerText=t[l].g;
-document.getElementById("s1").innerText=t[l].s1;
-document.getElementById("s1t").innerText=t[l].s1t;
-document.getElementById("s2").innerText=t[l].s2;
-document.getElementById("s2t").innerText=t[l].s2t;
-document.getElementById("s3").innerText=t[l].s3;
-document.getElementById("s3t").innerText=t[l].s3t;
-document.getElementById("contact-title").innerText=t[l].c;
-}
-</script>
-
+    <div class="foot">© <span id="y"></span> DON CEZAR PRODUCTION</div>
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
